@@ -1,0 +1,84 @@
+html,body{
+	height:100%;
+	overflow:hidden;
+}
+.intro{
+    background:white;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+}
+
+.message{
+    background-color: #f04124;
+    border-color: #ea2f10;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+	-webkit-transition: transform 0.3s ease;
+    position: absolute; left: 0; right: 0;
+}
+.message.hide{
+	-webkit-transform: translateY(-90px);
+    transform: translateY(-90px);
+}
+.message.show{
+    -webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.close{
+    position: relative;
+    top: 4px;
+    right:-10px;
+    color: inherit;
+    
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    
+    opacity: 0.4;
+    text-decoration: none;
+    text-shadow: none;
+
+    font-size: 22.5px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+.app {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    text-align:center;
+    margin-top: -47.5px;
+    margin-left: -91.5px;
+    
+    opacity: 0; visibility: hidden;
+    transform: translateY(10px);
+	transform: translateY(10px);
+	transform: translateY(10px);
+    
+    transition:opacity 0.3s linear, visibility 0.3s linear, transform 0.3s ease;
+	-webkit-transition:opacity 0.3s linear, visibility 0.3s linear, transform 0.3s ease;
+    z-index: -1;
+}
+.app-load{
+    opacity: 1; visibility: visible;
+    transform: translateY(0);
+	-webkit-transform: translateY(0);
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+    }
+}
