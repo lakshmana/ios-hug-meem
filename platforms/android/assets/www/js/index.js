@@ -46,7 +46,9 @@ function appLoadSuccess(){
 		}, "Offline!");
 	} else {
 		//setTimeout(function(){window.location = 'http://hug-meem.procab-studio.com/';}, 50);
-		setTimeout(function(){window.location = 'http://www.monenfantestmalade.ch/';}, 50); //
+		
+		setTimeout(function(){window.location = 'http://codalis.ch/test/test.html';}, 50); //
+		//setTimeout(function(){window.location = 'http://www.monenfantestmalade.ch/';}, 50); //
 		
 	}
 }
@@ -124,6 +126,7 @@ var app = {
 
         console.log('Received Event: ' + id);
         */
+        StatusBar.hide();
         appLoadSuccess();
     }
 };
